@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index_39-2</title>
+</head>
+
+<body>
+  <script>
+    let calcD = (a, b, c) => {
+      return ((b * b) - (4 * a * c))
+    }
+
+    function input(x) {
+      let number = prompt('Введите значение переменной ' + x);
+      return number;
+    }
+
+    function validationDate(valid) {
+      if (isNaN(+valid) || valid.replace(/\s+/g, '') == '') {
+        alert('Допускается ввод только чисел')
+        return false
+      }
+      else return true;
+    }
+
+    let a = input('a');
+    while (validationDate(a) == 0) {
+      a = input('a');
+    }
+    let b = input('b');
+    while (validationDate(b) == 0) {
+      b = input('b');
+    }
+    let c = input('c');
+    while (validationDate(c) == 0) {
+      c = input('c');
+    }
+
+    alert('D = ' + calcD(a, b, c));
+  </script>
+  </body>
+  
+  </html>
